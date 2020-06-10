@@ -1,0 +1,12 @@
+{
+  "inventory": {
+  "Guitar": 5,
+  "Mixer": 2,
+  "Tambourine": 9
+  },
+  "customers": {
+    "1": "a",
+    "2": "b",
+    "3": "c"
+  }
+}
