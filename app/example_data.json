@@ -9,5 +9,10 @@
     "2": "b",
     "3": "c",
     "4": null
+  },
+  "shopping_list":{
+    "Guitar": [2,2],
+    "Flute": [3],
+    "Tambourine": [2]
   }
 }

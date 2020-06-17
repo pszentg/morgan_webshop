@@ -6,6 +6,7 @@ from payment_processor import PaymentProcessor
 
 inventory = Inventory()
 customers = []
+shopping_list = []
 with open("example_data.json", "r") as f:
     items = json.load(f)
     for k, v in items['inventory'].items():
@@ -14,7 +15,10 @@ with open("example_data.json", "r") as f:
     for k, v in items['customers'].items():
         customers.append(Customer(k, v))
 
-shopping_list = [(Item("Guitar"), 2), (Item("Flute"), 3), (Item("Tambourine"), 2), (Item("Guitar"), 2)]
+    for k, v in enumerate(items['shopping_list']):
+        amounts = items['shopping_list'][v]
+        for amount in amounts:
+            shopping_list.append((Item(v), amount))
 
 payment_processor = PaymentProcessor(inventory)
 
